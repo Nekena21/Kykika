@@ -1,7 +1,67 @@
 @extends('layouts.app')
 
+@push('styles')
+<style>
+    label {
+        color: #00ffcc;
+        font-weight: 500;
+        text-shadow: 0 0 5px #00ffcc;
+    }
+    .card {
+        background-color: #1f1f1f;
+        border: 1px solid #00ffcc;
+        box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+    }
+
+    .card-header {
+        background-color: #121212;
+        color: #00ffcc;
+        font-weight: bold;
+        text-shadow: 0 0 5px #00ffcc;
+        text-align: center;
+    }
+
+    .form-control {
+        background-color: #121212;
+        color: #ffffff;
+        border: 1px solid #00ffcc;
+    }
+
+    .form-control:focus {
+        border-color: #00ffcc;
+        box-shadow: 0 0 10px #00ffcc;
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+
+    .btn-primary {
+        background-color: #00ffcc;
+        border: none;
+        color: #000;
+        font-weight: bold;
+        box-shadow: 0 0 10px #00ffcc;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btn-primary:hover {
+        background-color: #00ccaa;
+        box-shadow: 0 0 20px #00ffcc;
+        transform: scale(1.05);
+    }
+
+    a.btn-link {
+        color: #00ffcc;
+        text-shadow: 0 0 5px #00ffcc;
+    }
+
+    a.btn-link:hover {
+        color: #ffffff;
+    }
+</style>
+@endpush
+
 @section('content')
-<div class="container">
+<div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
