@@ -51,12 +51,26 @@
         .navbar-toggler-icon {
             filter: invert(1) brightness(2);
         }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #000;
+            color: #aaa;
+            border-top: 1px solid #00ffcc33;
+        }
     </style>
 </head>
 
-<body style="background-color: #0d0d0d; color: #ffffff; font-family: 'Segoe UI', sans-serif;">
+<body style="
+    background: linear-gradient(135deg, #0d0d0d 0%, #001f1f 50%, #003333 100%);
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm fixed-top navbar-custom">
             <div class="container">
                 <a class="navbar-brand text-info fw-bold" href="{{ url('/') }}">
                     {{ config('app.name', 'RobotControl') }}
@@ -72,10 +86,10 @@
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <!-- Partie gauche -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link text-light" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" href="#">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" href="#">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#faq">FAQ</a></li>
                     </ul>
                     
                     <!-- Partie droite -->
@@ -124,5 +138,12 @@
     </div>
 
     @stack('scripts')
+    
+    <!-- Footer -->
+    @if (!in_array(Route::currentRouteName(), ['login', 'register']))
+        <footer class="footer">
+            <p>&copy; 2025 — Projet de stage de RANDRIAMBELO Tendry Ny Avo Nekena Mélodie | EMIT STEM HUB</p>
+        </footer>
+    @endif
 </body>
 </html>
