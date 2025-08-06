@@ -9,7 +9,7 @@
     /* === Hero Section === */
     .hero-section {
         background: linear-gradient(to right, #001f1f, #001111);
-        min-height: 100vh;
+        min-height: 50vh;
         display: flex;
         align-items: center;
         padding-top: 100px;
@@ -94,13 +94,13 @@
                 <p class="lead">Ton robot est prêt à recevoir tes commandes intelligentes !</p>
 
                 <div class="btn-section">
+                    <a href="#" class="btn btn-neon mb-2">🔗 Connexion au robot</a><br>
                     <a href="{{ url('/control') }}" class="btn btn-neon me-3 mb-2">⚙️ Contrôler le robot</a>
                     <a href="{{ url('/status') }}" class="btn btn-neon me-3 mb-2">📊 Statut du robot</a>
-                    <a href="#" class="btn btn-neon mb-2">🔗 Connexion au robot</a>
                 </div>
             </div>
             <div class="col-md-5 text-center d-none d-md-block">
-                <img src="{{ asset('IMG/PetitGars.png') }}" class="img-fluid" style="max-height: 300px;" alt="Robot">
+                <img src="{{ asset('IMG/minibot.png') }}" class="img-fluid" style="max-height: 300px;" alt="Robot">
             </div>
         </div>
     </div>

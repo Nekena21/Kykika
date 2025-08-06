@@ -1,7 +1,31 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-5">
+<style>
+    body {
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: #f8f9fa;
+    }
+    h2 {
+        color: #00e1ff;
+    }
+    .card {
+        background-color: #1e1e2f;
+        border: none;
+        color: #ffffff;
+    }
+    .list-group-item {
+        background-color: #2a2a3d;
+        border: 1px solid #444;
+        color: #ffffff;
+    }
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+    }
+</style>
+
+<div class="container mt-5 py-5">
     <h2 class="text-center mb-4">📊 Statut du robot</h2>
 
     <div class="card shadow p-4">
@@ -13,9 +37,9 @@
         </ul>
     </div>
 
-    <div class="text-center mt-3">
-        <a href="/control" class="btn btn-primary">Retour au contrôle</a>
-        <a href="/home" class="btn btn-primary">Retour au tableau de bord</a>
+    <div class="text-center mt-4">
+        <a href="/control" class="btn btn-primary me-2">🎮 Contrôle</a>
+        <a href="/home" class="btn btn-primary">🏠 Accueil</a>
     </div>
 </div>
 
@@ -34,9 +58,7 @@ function chargerStatus() {
         });
 }
 
-// Charger immédiatement au démarrage
 chargerStatus();
-// Puis recharger toutes les 3 secondes
 setInterval(chargerStatus, 3000);
 </script>
 @endsection
